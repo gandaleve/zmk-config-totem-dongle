@@ -6,6 +6,28 @@
 
 #include "totem.dtsi"
 
+/ {
+    /*
+     * This physical_layout block is REQUIRED for ZMK Studio.
+     * You must define the position and size of every key.
+     */
+    physical_layout {
+        compatible = "zmk,physical-layout";
+        display-name = "Totem (Half)"; // Or "Totem (Left)", "Totem (Right)"
+        keys = <
+            /*
+             * This section needs to be filled in with your keyboard's layout.
+             * The format is ZMK_KEY(x, y, width, height).
+             *
+             * For example:
+             * ZMK_KEY(0, 0, 100, 100)      // Key at position 0,0 with standard 1u size
+             * ZMK_KEY(105, 0, 100, 100)     // Key next to it (with 5 units of spacing)
+             * ... and so on for all keys on this half.
+             */
+        >;
+    };
+};
+
 &kscan0 {
     col-gpios
         = <&xiao_d 4 GPIO_ACTIVE_HIGH>
