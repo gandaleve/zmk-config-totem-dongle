@@ -36,6 +36,21 @@
             key-positions = <0 1>;
             bindings = <&kp ESC>;
         };
+
+        return {
+            bindings = <&kp RET>;
+            key-positions = <16 17 18>;
+        };
+
+        game {
+            bindings = <&tog 4>;
+            key-positions = <11 12 13 16 17 18 10 19>;
+        };
+
+        clipboard {
+            bindings = <&kp LG(V)>;
+            key-positions = <21 22 23>;
+        };
     };
 
     keymap {
@@ -60,10 +75,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-           &kp Q  &kp W  &kp E    &kp R        &kp T        &kp Y          &kp U    &kp I           &kp O    &kp P
-           &kp A  &kp S  &kp D    &kp F        &kp G        &kp H          &kp J    &kp K           &kp L    &kp RGUI
-&kp GRAVE  &kp Z  &kp X  &kp C    &kp V        &kp B        &kp N          &kp M    &kp COMMA       &kp DOT  &kp FSLH  &kp BSLH
-                         &kp DEL  &lt NAV TAB  &kp SPACE    &kp BACKSPACE  &kp RET  &lt 2 LEFT_GUI
+                 &kp Q  &kp W  &kp E      &kp R        &kp T        &kp Y          &kp U       &kp I      &kp O    &kp P
+                 &kp A  &kp S  &kp D      &kp F        &kp G        &kp H          &kp J       &kp K      &kp L    &kp RGUI
+&mt LCTRL GRAVE  &kp Z  &kp X  &kp C      &kp V        &kp B        &kp N          &kp M       &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
+                               &lt 2 ESC  &lt NAV TAB  &kp SPACE    &kp BACKSPACE  &kp LSHIFT  &kp RET
             >;
         };
 
@@ -86,10 +101,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp ESC        &bt BT_CLR  &kp UP    &kp EQUAL  &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_PLUS
-        &kp PAGE_UP    &kp LEFT    &kp DOWN  &kp RIGHT  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_MINUS
-&trans  &kp PAGE_DOWN  &kp HOME    &kp CAPS  &kp END    &kp LEFT_BRACE          &kp RIGHT_BRACE        &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_MULTIPLY  &trans
-                                   &trans    &trans     &trans                  &mo ADJ                &kp KP_N0  &trans
+               &kp LESS_THAN  &kp GREATER_THAN  &kp UP    &kp EQUAL  &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_PLUS
+               &kp PAGE_UP    &kp LEFT          &kp DOWN  &kp RIGHT  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_MINUS
+&kp LESS_THAN  &kp PAGE_DOWN  &kp HOME          &kp CAPS  &kp END    &kp LEFT_BRACE          &kp RIGHT_BRACE        &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_MULTIPLY  &kp GREATER_THAN
+                                                &trans    &trans     &trans                  &mo ADJ                &kp KP_N0  &trans
             >;
         };
 
