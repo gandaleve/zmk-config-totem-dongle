@@ -22,4 +22,4 @@ include:
     shield: settings_reset
     snippets:
       - studio-rpc-usb-uart
-cmake-args: -DCONFIG_ZMK_STUDIO=y
+
