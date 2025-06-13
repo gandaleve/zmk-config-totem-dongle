@@ -44,12 +44,22 @@
 
         game {
             bindings = <&tog 4>;
-            key-positions = <11 12 13 16 17 18 10 19>;
+            key-positions = <1 2 3 6 7 8>;
         };
 
         clipboard {
             bindings = <&kp LG(V)>;
             key-positions = <21 22 23>;
+        };
+
+        copy {
+            bindings = <&kp LC(C)>;
+            key-positions = <21 22>;
+        };
+
+        paste {
+            bindings = <&kp LC(P)>;
+            key-positions = <23 22>;
         };
     };
 
@@ -75,10 +85,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                 &kp Q  &kp W  &kp E      &kp R        &kp T        &kp Y          &kp U       &kp I      &kp O    &kp P
-                 &kp A  &kp S  &kp D      &kp F        &kp G        &kp H          &kp J       &kp K      &kp L    &kp RGUI
-&mt LCTRL GRAVE  &kp Z  &kp X  &kp C      &kp V        &kp B        &kp N          &kp M       &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
-                               &lt 2 ESC  &lt NAV TAB  &kp SPACE    &kp BACKSPACE  &kp LSHIFT  &kp RET
+                 &kp Q  &kp W  &kp E      &kp R           &kp T        &kp Y      &kp U          &kp I      &kp O    &kp P
+                 &kp A  &kp S  &kp D      &kp F           &kp G        &kp H      &kp J          &kp K      &kp L    &kp RGUI
+&mt LCTRL GRAVE  &kp Z  &kp X  &kp C      &kp V           &kp B        &kp N      &kp M          &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
+                               &lt 2 ESC  &kp LEFT_SHIFT  &kp SPACE    &kp SPACE  &kp BACKSPACE  &lt 1 TAB
             >;
         };
 
@@ -101,10 +111,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-               &kp LESS_THAN  &kp GREATER_THAN  &kp UP    &kp EQUAL  &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_PLUS
-               &kp PAGE_UP    &kp LEFT          &kp DOWN  &kp RIGHT  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_MINUS
-&kp LESS_THAN  &kp PAGE_DOWN  &kp HOME          &kp CAPS  &kp END    &kp LEFT_BRACE          &kp RIGHT_BRACE        &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_MULTIPLY  &kp GREATER_THAN
-                                                &trans    &trans     &trans                  &mo ADJ                &kp KP_N0  &trans
+               &kp MINUS      &kp N1  &kp NUMBER_2  &kp N3  &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &kp EQUAL       &kp UP_ARROW    &kp KP_N9        &kp PAGE_UP
+               &kp GRAVE      &kp N4  &kp NUMBER_5  &kp N6  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PAGE_DOWN
+&kp LESS_THAN  &kp PAGE_DOWN  &kp N7  &kp N8        &kp N9  &kp LEFT_BRACE          &kp RIGHT_BRACE        &kp HOME        &kp CLCK        &kp END          &kp NON_US_BACKSLASH  &kp GREATER_THAN
+                                      &kp N0        &trans  &trans                  &mo ADJ                &trans          &trans
             >;
         };
 
@@ -127,10 +137,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp EXCL     &kp AT       &kp HASH   &kp DLLR  &kp PRCNT    &kp CARET     &kp AMPS        &kp ASTERISK  &kp SQT     &kp DQT
-        &kp RA(A)    &trans       &kp RA(S)  &trans    &trans       &kp C_MUTE    &kp LS(RA(N4))  &kp RA(N5)    &kp RA(N4)  &kp RA(O)
-&trans  &kp RA(F18)  &kp RA(F19)  &trans     &trans    &trans       &kp C_VOL_DN  &kp C_VOL_UP    &kp C_PREV    &kp C_NEXT  &kp BSLH   &studio_unlock
-                                  &trans     &trans    &mo ADJ      &trans        &kp C_PP        &trans
+        &kp EXCL     &kp AT       &kp HASH   &kp DLLR  &kp PRCNT    &kp CARET      &kp AMPS  &kp ASTERISK  &kp SQT  &kp DQT
+        &kp RA(A)    &trans       &kp RA(S)  &trans    &trans       &kp BACKSLASH  &kp PIPE  &kp GRAVE     &trans   &kp RA(O)
+&trans  &kp RA(F18)  &kp RA(F19)  &trans     &trans    &trans       &trans         &trans    &kp TILDE     &trans   &kp BSLH   &studio_unlock
+                                  &trans     &trans    &mo ADJ      &trans         &kp C_PP  &trans
             >;
         };
 
