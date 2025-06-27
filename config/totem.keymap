@@ -66,6 +66,11 @@
             bindings = <&kp LEFT_GUI>;
             key-positions = <5 6>;
         };
+
+        screenshot {
+            bindings = <&kp LG(S)>;
+            key-positions = <9 8>;
+        };
     };
 
     keymap {
